@@ -2,6 +2,12 @@ package googleAPIs;
 
 public class GoogleMapsResources {
 
+	public static String placeJsonGetData()
+	{	
+		String res="/maps/api/place/nearbysearch/json";
+		return res;
+	}
+	
 	//You can call method from the class name with className.method if that method is defined with static
 	public static String placePostData()
 	{	

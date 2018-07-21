@@ -32,6 +32,29 @@ public class GooglePlaceAPI_PostAndDelete {
 	}
 
 	@Test
+	public void getPlaceAPI() {
+		// TODO Auto-generated method stub
+
+		// BaseURL or Host
+		RestAssured.baseURI = prop.getProperty("HOST");
+		
+		given()
+		.param("location", "-33.8670522,151.1957362")
+		.param("radius", "500")				
+		.param("key", prop.getProperty("KEY"))
+		
+		.when()
+			.get(GoogleMapsResources.placeJsonGetData())
+			
+		.then()
+			.assertThat().statusCode(200)
+			.and().contentType(ContentType.JSON)
+			.and().body("results[0].name", equalTo("Sydney"))
+			.and().body("results[0].place_id", equalTo("ChIJP3Sa8ziYEmsRUKgyFmh9AQM"))
+			.and().header("Server", "scaffolding on HTTPServer2");
+	}	
+	
+	@Test
 	public void AddandDeletePlace() {
 		
 		// Task 1- Grab the response
@@ -72,4 +95,6 @@ public class GooglePlaceAPI_PostAndDelete {
 				.assertThat().statusCode(200).and().contentType(ContentType.JSON).and().body("status", equalTo("OK"));
 
 	}
+
+
 }
