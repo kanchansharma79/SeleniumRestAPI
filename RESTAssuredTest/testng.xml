@@ -7,7 +7,6 @@
     </listeners>
   <test name="Test">
     <classes>
-      <class name="TestFramework.GooglePlaceAPI_Get"/>
       <class name="TestFramework.GooglePlaceAPI_Post"/>
       <class name="TestFramework.GooglePlaceAPI_PostAndDelete"/>
       <class name="TestFramework.AppTest"/>
