@@ -8,7 +8,7 @@
   <test name="Test">
     <classes>
       <class name="TestFramework.GooglePlaceAPI_Post"/>
-      <class name="TestFramework.GooglePlaceAPI_PostAndDelete"/>
+      <class name="TestFramework.GooglePlaceAPI"/>
       <class name="TestFramework.AppTest"/>
     </classes>
   </test> <!-- Test -->
